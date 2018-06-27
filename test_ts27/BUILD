@@ -10,7 +10,7 @@ jasmine_node_test(
         "check_ts_version.js",
         "//test:unit_test_lib",
     ],
-    node_modules = ":node_modules",
+    node_modules_list = [":node_modules", "//:node_modules"],
 )
 
 jasmine_node_test(
@@ -19,7 +19,7 @@ jasmine_node_test(
         "check_ts_version.js",
         "//test:golden_test_lib",
     ],
-    node_modules = ":node_modules",
+    node_modules_list = [":node_modules", "//:node_modules"],
     data = ["//:test_files"],
 )
 
@@ -30,5 +30,5 @@ jasmine_node_test(
       "//test:e2e_test_lib",
     ],
     data = ["//:test_files"],
-    node_modules = ":node_modules",
+    node_modules_list = [":node_modules", "//:node_modules"],
 )
